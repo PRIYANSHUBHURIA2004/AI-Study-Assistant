@@ -11,7 +11,7 @@ load_dotenv()
 
 app = FastAPI(title="AI Study Buddy")
 
-FRONTEND_DIR = Path(__file__).resolve().parent / "frontend"
+Path(__file__).resolve().parent.parent / "frontend"
 client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
 
 QUIZ_PROMPT = """Create a 3-question multiple-choice quiz on the topic: "{topic}".
