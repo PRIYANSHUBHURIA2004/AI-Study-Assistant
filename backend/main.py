@@ -53,7 +53,7 @@ async def generate_quiz(request: QuizRequest):
     async def stream_quiz():
         try:
             stream = await client.chat.completions.create(
-                model="qwen-2.5-32b",
+                model="gpt-oss-20b",
                 messages=[
                     {
                         "role": "system",
